@@ -1,0 +1,36 @@
+
+    <div class="col-md-12"> 
+<div class="logo">
+    <a href="https://ww2.ufps.edu.co/">
+        <div class="row">
+            <div class="column1">
+
+                <div class="logo-img">
+            <img src="https://pbs.twimg.com/profile_images/1219749693753888773/pBzsn5bC_400x400.jpg"/>
+           </div> 
+            </div>
+        
+         <div class="column2">
+           <span>Vicerrectoria Asistente de Investigacion y Extension</span>
+         </div> 
+        </div>
+    </a>
+</div>
+   
+</div>
+<div class="sidebar-wrapper">
+  <div *ngIf="isMobileMenu()">
+    <form class="navbar-form">
+     
+    </form>
+ 
+  </div>
+    <ul class="nav">
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+            <a class="nav-link" [routerLink]="[menuItem.path]">
+                <i class="material-icons">{{menuItem.icon}}</i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>
